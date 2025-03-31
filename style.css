@@ -1,19 +1,22 @@
 /* Improve options display for better clarity */
 .option {
-    padding: 10px 15px;
-    background-color: #f5f5f5;
+    padding: 15px;
+    background-color: #f8f8f8;
     border: 1px solid #ddd;
-    border-radius: 5px;
+    border-radius: 8px;
     cursor: pointer;
-    transition: background-color 0.3s;
+    transition: all 0.3s ease;
     width: 100%;
     text-align: left;
+    position: relative;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
 }
 
 .option:hover {
-    background-color: #3e3e68;
-    transform: translateX(5px);
-    border-color: rgba(255, 154, 60, 0.3);
+    background-color: #eef1ff;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    border-color: #c8d0ff;
 }
 
 .option:before {
@@ -60,15 +63,17 @@
 
 /* Improved visual feedback for correct/incorrect */
 .correct {
-    background-color: #4caf50 !important;
-    color: white;
-    animation: pulse 1s infinite;
+    background-color: #e7f7e7 !important;
+    color: #2e7d32;
+    border-color: #2e7d32;
+    font-weight: 500;
 }
 
 .incorrect {
-    background-color: #f44336 !important;
-    color: white;
-    animation: shake 0.5s;
+    background-color: #ffebee !important;
+    color: #c62828;
+    border-color: #c62828;
+    font-weight: 500;
 }
 
 @keyframes pulse {
@@ -129,11 +134,49 @@
 }
 
 #options-container {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
     margin: 20px 0;
     width: 100%;
-    max-height: none;
-    overflow: visible;
+}
+
+#quiz-container {
+    background-color: white;
+    border-radius: 12px;
+    padding: 30px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    width: 90%;
+    max-width: 700px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 10;
+    transition: all 0.3s ease;
+}
+
+#question {
+    font-size: 1.3rem;
+    font-weight: 500;
+    color: #333;
+    margin-bottom: 20px;
+    line-height: 1.5;
+}
+
+button {
+    background-color: #4a55a2;
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 6px rgba(74, 85, 162, 0.2);
+}
+
+button:hover {
+    background-color: #3a4584;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 10px rgba(74, 85, 162, 0.3);
 } 

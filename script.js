@@ -122,4 +122,21 @@ function selectOption(e) {
     // Show next button
     document.getElementById('next-button').classList.remove('hidden');
     gsap.from('#next-button', { duration: 0.5, y: 20, opacity: 0 });
-} 
+}
+
+// Modify your initialization code to shuffle questions when the quiz starts
+document.getElementById('start-button').addEventListener('click', function() {
+    document.getElementById('start-screen').classList.add('hidden');
+    document.getElementById('question-screen').classList.remove('hidden');
+    
+    // Shuffle the questions array
+    questions = shuffleArray([...questions]);
+    
+    // Reset quiz state
+    currentQuestion = 0;
+    score = 0;
+    document.getElementById('score').textContent = score;
+    
+    // Load the first question
+    loadQuestion();
+}); 
