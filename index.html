@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Indian History Quiz</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.11.5/dist/gsap.min.js"></script>
+</head>
+<body>
+    <div id="container">
+        <div id="quiz-container">
+            <div id="start-screen">
+                <h1>Indian History Quiz</h1>
+                <p>Test your knowledge of Indian history after the 1800s!</p>
+                <button id="start-button">Start Quiz</button>
+            </div>
+            <div id="question-screen" class="hidden">
+                <div id="progress-bar">
+                    <div id="progress"></div>
+                </div>
+                <div id="score-display">Score: <span id="score">0</span></div>
+                <div id="question-number">Question <span id="current-question">1</span>/20</div>
+                <div id="question">Question goes here</div>
+                <div id="options-container">
+                    <!-- Options will be inserted here -->
+                </div>
+                <button id="next-button" class="hidden">Next Question</button>
+            </div>
+            <div id="result-screen" class="hidden">
+                <h1>Quiz Complete!</h1>
+                <p>Your final score: <span id="final-score">0</span>/20</p>
+                <div id="result-message"></div>
+                <button id="restart-button">Take Quiz Again</button>
+            </div>
+        </div>
+    </div>
+    <div id="canvas-container"></div>
+    <script src="script.js"></script>
+</body>
+</html> 
