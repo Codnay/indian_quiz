@@ -1,15 +1,13 @@
 /* Improve options display for better clarity */
 .option {
-    padding: 15px;
-    background-color: #313154;
-    border-radius: 8px;
+    padding: 10px 15px;
+    background-color: #f5f5f5;
+    border: 1px solid #ddd;
+    border-radius: 5px;
     cursor: pointer;
-    transition: all 0.2s ease;
+    transition: background-color 0.3s;
+    width: 100%;
     text-align: left;
-    margin-bottom: 8px;
-    border: 2px solid transparent;
-    position: relative;
-    overflow: hidden;
 }
 
 .option:hover {
@@ -128,4 +126,14 @@
     to {
         transform: translateX(100%);
     }
+}
+
+#options-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    margin: 20px 0;
+    width: 100%;
+    max-height: none;
+    overflow: visible;
 } 
